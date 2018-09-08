@@ -2,8 +2,8 @@ class Player {
     createPlayer(tankClass, socketID) {
         this.x = 0;
         this.y = 0;
-        this.rotation = 0;
-        this.playerId= socketID;
+        this.angle = 0;
+        this.playerID= socketID;
         this.team = (Math.floor(Math.random() * 2) == 0) ? 'red' : 'blue';
         switch(tankClass){
             case "MBT":
@@ -31,6 +31,3 @@ class Player {
 }
 
 module.exports = Player;
-// module.exports = {
-//     Player: Player
-// }
