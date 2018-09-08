@@ -1,0 +1,24 @@
+node.js notes
+
+vars are not global by default
+functions are not global by default
+every file is a module, and contains the scope of the vars and functions in it
+
+Node wraps every module with function: exports, require, module __filename, __dirname
+
+
+ARCHITECTURE::::
+
+server.js
+    Creates and keeps list of all:
+        players
+        projectiles
+        objects
+
+game.js
+    Takes list of all () from server
+        players
+        projectiles
+        objects
+    And updates local list.
+    Must assign physics sprite to all objects given from server.
